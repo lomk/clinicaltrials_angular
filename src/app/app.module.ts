@@ -6,11 +6,11 @@ import {HttpModule}                 from '@angular/http';
 import { AppComponent }             from './app.component';
 import {AppRoutingModule}           from './app-routing.module';
 import {Globals }                   from './globals';
-import {LoginComponent}             from './auth/login.component';
-import {LogoutComponent}            from './auth/logout.component';
-import {AdminModule}                from './admin/admin.module';
-import {TesterModule}               from './tester/tester.module';
-import {AuthService}                from './auth/auth.service';
+import {LoginComponent}             from './components/login.component';
+import {LogoutComponent}            from './components/logout.component';
+import {AdminModule}                from './modules/admin.module';
+import {TesterModule}               from './unused/tester/tester.module';
+import {AuthService}                from './services/auth.service';
 
 @NgModule({
     imports: [
