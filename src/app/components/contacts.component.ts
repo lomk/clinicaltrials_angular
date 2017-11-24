@@ -6,10 +6,10 @@ import                  'rxjs/add/operator/toPromise';
 import                  'rxjs/add/observable/throw';
 
 @Component({
-  selector: 'app-about-us',
-  templateUrl: '../html/about-us.component.html'
+  selector: 'app-contacts',
+  templateUrl: '../html/contacts.component.html'
 })
-export class AboutUsComponent {
-  title = 'About us';
-  content = 'Admin main page';
+export class ContactsComponent {
+  title = 'Contacts';
+  content = 'Contacts';
 }

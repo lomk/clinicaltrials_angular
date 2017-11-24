@@ -10,25 +10,20 @@ import {LoginComponent}             from './components/login.component';
 import {LogoutComponent}            from './components/logout.component';
 import {AdminModule}                from './modules/admin.module';
 import {AuthService}                from './services/auth.service';
+import {MainModule} from './modules/main.module';
 
 @NgModule({
     imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-        AdminModule,
-        AppRoutingModule
+      BrowserModule,
+      FormsModule,
+      HttpModule,
+      AdminModule,
+      MainModule,
+      AppRoutingModule
   ],
     declarations: [
         AppComponent,
         // RemoteIpDetailComponent,
-        // RemoteIpComponent,
-        // RemoteIpFormComponent,
-        // QueueRuleComponent,
-        // TesterQueueRuleComponent,
-        // QueueRuleDetailsComponent,
-        // QueueRuleFormComponent,
-        // TesterQueueRuleFormComponent,
         LoginComponent,
         LogoutComponent
   ],

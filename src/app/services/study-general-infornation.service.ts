@@ -1,4 +1,4 @@
-import { StudyGeneralInfornation }         from '../domain/study-general-infornation';
+import { StudyGeneralInformation }         from '../domain/study-general-information';
 import {Http, RequestOptions} from '@angular/http';
 import { Injectable }   from '@angular/core';
 import {Headers}        from '@angular/http';
@@ -6,55 +6,55 @@ import {Observable}     from 'rxjs/Observable';
 import {Globals} from '../globals';
 
 @Injectable()
-export class StudyGeneralInfornationService {
-  private studyGeneralInfornationAdminUrl = this.globals.API_URL + '/admin/studyGeneralInfornation';
-  private studyGeneralInfornationUrl = this.globals.API_URL + '/studyGeneralInfornation';
+export class StudyGeneralInformationService {
+  private studyGeneralInformationAdminUrl = this.globals.API_URL + '/admin/studyGeneralInformation';
+  private studyGeneralInformationUrl = this.globals.API_URL + '/studyGeneralInformation';
   private headers = new Headers({'Content-Type': 'application/json'});
 
 
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getAll(page: number): Observable<StudyGeneralInfornation[]> {
+  getAll(page: number): Observable<StudyGeneralInformation[]> {
     const options = new RequestOptions();
-    const url = `${this.studyGeneralInfornationUrl}?page=${page}`;
+    const url = `${this.studyGeneralInformationUrl}?page=${page}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)
-      .map(response => response.json() as StudyGeneralInfornation[])
+      .map(response => response.json() as StudyGeneralInformation[])
       .catch(this.handleError);
   }
 
-  getOne(id: number): Observable<StudyGeneralInfornation> {
+  getOne(id: number): Observable<StudyGeneralInformation> {
     const options = new RequestOptions();
-    const url = `${this.studyGeneralInfornationUrl}?id=${id}`;
+    const url = `${this.studyGeneralInformationUrl}?id=${id}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)
-      .map(response => response.json() as StudyGeneralInfornation)
+      .map(response => response.json() as StudyGeneralInformation)
       .catch(this.handleError);
   }
 
-  create(studyGeneralInfornation: StudyGeneralInfornation): Observable<StudyGeneralInfornation> {
+  create(studyGeneralInformation: StudyGeneralInformation): Observable<StudyGeneralInformation> {
     const options = new RequestOptions();
-    const url = `${this.studyGeneralInfornationAdminUrl}/add`;
+    const url = `${this.studyGeneralInformationAdminUrl}/add`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http
-      .post(url, JSON.stringify(studyGeneralInfornation), options)
-      .map(response => response.json() as StudyGeneralInfornation)
+      .post(url, JSON.stringify(studyGeneralInformation), options)
+      .map(response => response.json() as StudyGeneralInformation)
       .catch(this.handleError);
     // .catch(response => Observable.throw(response.json()));
   }
 
-  update(studyGeneralInfornation: StudyGeneralInfornation): Observable<StudyGeneralInfornation> {
+  update(studyGeneralInformation: StudyGeneralInformation): Observable<StudyGeneralInformation> {
     const options = new RequestOptions();
-    const url = `${this.studyGeneralInfornationAdminUrl}/${studyGeneralInfornation.id}`;
+    const url = `${this.studyGeneralInformationAdminUrl}/${studyGeneralInformation.id}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http
-      .put(url, JSON.stringify(studyGeneralInfornation), options)
-      .map(response => response.json() as StudyGeneralInfornation)
+      .put(url, JSON.stringify(studyGeneralInformation), options)
+      .map(response => response.json() as StudyGeneralInformation)
       .catch(this.handleError);
     // .catch(response => Observable.throw(response.json()));
   }
@@ -63,7 +63,7 @@ export class StudyGeneralInfornationService {
     const options = new RequestOptions();
     options.withCredentials = true;
     options.headers = this.headers;
-    const url = `${this.studyGeneralInfornationUrl}/${id}`;
+    const url = `${this.studyGeneralInformationUrl}/${id}`;
     return this.http.delete(url, options)
       .map(() => null)
       .catch(this.handleError);

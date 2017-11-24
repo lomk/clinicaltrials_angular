@@ -6,6 +6,7 @@ import {LogoutComponent}            from './components/logout.component';
 import {AdminComponent}             from './components/admin.component';
 import {AdminRoutingModule}         from './modules/admin-routing.module';
 import {AuthService}                from './services/auth.service';
+import {MainRoutingModule} from './modules/main-routing.module';
 
 const routes: Routes = [
     { path: '',                         redirectTo: '/login', pathMatch: 'full' },
@@ -15,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [ RouterModule.forRoot(routes), AdminRoutingModule ],
+    imports: [ RouterModule.forRoot(routes), AdminRoutingModule, MainRoutingModule ],
     exports: [ RouterModule ], providers : [
   AuthService
 ]

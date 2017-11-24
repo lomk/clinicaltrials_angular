@@ -1,12 +1,12 @@
-import { Tag }         from '../domain/investigator-fax';
-import {Http, RequestOptions} from '@angular/http';
-import { Injectable }   from '@angular/core';
-import {Headers}        from '@angular/http';
-import {Observable}     from 'rxjs/Observable';
-import {Globals} from '../globals';
+import { InvestigatorFax }      from '../domain/investigator-fax';
+import {Http, RequestOptions}   from '@angular/http';
+import { Injectable }           from '@angular/core';
+import {Headers}                from '@angular/http';
+import {Observable}             from 'rxjs/Observable';
+import {Globals}                from '../globals';
 
 @Injectable()
-export class TagService {
+export class InvestigatorFaxService {
   private investigatorFaxAdminUrl = this.globals.API_URL + '/admin/investigatorFax';
   private investigatorFaxUrl = this.globals.API_URL + '/investigatorFax';
   private headers = new Headers({'Content-Type': 'application/json'});
@@ -15,46 +15,46 @@ export class TagService {
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getAll(page: number): Observable<Tag[]> {
+  getAll(page: number): Observable<InvestigatorFax[]> {
     const options = new RequestOptions();
     const url = `${this.investigatorFaxUrl}?page=${page}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)
-      .map(response => response.json() as Tag[])
+      .map(response => response.json() as InvestigatorFax[])
       .catch(this.handleError);
   }
 
-  getOne(id: number): Observable<Tag> {
+  getOne(id: number): Observable<InvestigatorFax> {
     const options = new RequestOptions();
     const url = `${this.investigatorFaxUrl}?id=${id}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)
-      .map(response => response.json() as Tag)
+      .map(response => response.json() as InvestigatorFax)
       .catch(this.handleError);
   }
 
-  create(investigatorFax: Tag): Observable<Tag> {
+  create(investigatorFax: InvestigatorFax): Observable<InvestigatorFax> {
     const options = new RequestOptions();
     const url = `${this.investigatorFaxAdminUrl}/add`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http
       .post(url, JSON.stringify(investigatorFax), options)
-      .map(response => response.json() as Tag)
+      .map(response => response.json() as InvestigatorFax)
       .catch(this.handleError);
     // .catch(response => Observable.throw(response.json()));
   }
 
-  update(investigatorFax: Tag): Observable<Tag> {
+  update(investigatorFax: InvestigatorFax): Observable<InvestigatorFax> {
     const options = new RequestOptions();
     const url = `${this.investigatorFaxAdminUrl}/${investigatorFax.id}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http
       .put(url, JSON.stringify(investigatorFax), options)
-      .map(response => response.json() as Tag)
+      .map(response => response.json() as InvestigatorFax)
       .catch(this.handleError);
     // .catch(response => Observable.throw(response.json()));
   }

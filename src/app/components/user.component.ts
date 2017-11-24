@@ -44,8 +44,4 @@ export class UserComponent implements OnInit {
     onSelect(user: User): void {
         this.selectedUser = user;
     }
-
-    goToDetail(): void {
-        this.router.navigate(['/local-ip-details', this.selectedUser.id]);
-    }
 }

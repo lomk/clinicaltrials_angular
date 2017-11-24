@@ -32,10 +32,8 @@ import {AdminGuard}                 from '../services/admin-guard.service';
     UserFormComponent
   ],
   providers: [
-    Globals,
     RoleService,
     UserService,
-    AuthService,
     AdminGuard
   ],
   exports: [
