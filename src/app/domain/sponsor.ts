@@ -1,7 +1,7 @@
 
 
 
-import {Country} from "./country";
+import {Country} from './country';
 
 export class Sponsor {
   id: number;

@@ -1,4 +1,4 @@
-import {MedicalInstitutionOfHigherEducation} from "./medical-institution-of-higher-education";
+import {MedicalInstitutionOfHigherEducation} from './medical-institution-of-higher-education';
 
 export class MedicalInstitutionOfHigherEducationDepartment {
   id: number;

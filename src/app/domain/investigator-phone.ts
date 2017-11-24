@@ -1,5 +1,5 @@
 
-import {City} from "./city";
+import {City} from './city';
 
 export class InvestigatorPhone {
   id: number;

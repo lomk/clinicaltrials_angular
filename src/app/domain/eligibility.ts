@@ -3,8 +3,8 @@
 
 
 
-import {Gender} from "./gender";
-import {AcceptHealthyVolunteers} from "./accept-healthy-volunteers";
+import {Gender} from './gender';
+import {AcceptHealthyVolunteers} from './accept-healthy-volunteers';
 
 export class Eligibility {
   id: number;

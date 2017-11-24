@@ -1,7 +1,11 @@
 
 
 
-import {AcademicDegree} from "./academic-degree";
+import {AcademicDegree} from './academic-degree';
+import {InvestigatorPhone} from './investigator-phone';
+import {InvestigatorPhoneMobileService} from '../services/investigator-phone-mobile.service';
+import {InvestigatorPhoneMobile} from './investigator-phone-mobile';
+import {InvestigatorFax} from './investigator-fax';
 
 export class Investigator {
   id: number;
@@ -16,9 +20,9 @@ export class Investigator {
   patronymicNameEn: String;
   birthDate: String;
   academicDegrees: Array<AcademicDegree>;
-  phoneList:
-  phoneMobileList
-  faxList
+  phoneList: Array<InvestigatorPhone>;
+  phoneMobileList: Array<InvestigatorPhoneMobile>;
+  faxList: Array<InvestigatorFax>;
 
 
 

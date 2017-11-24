@@ -15,9 +15,9 @@ export class AcademicDegreeService {
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getAll(page: number): Observable<AcademicDegree[]> {
+  getAll(): Observable<AcademicDegree[]> {
     const options = new RequestOptions();
-    const url = `${this.academicDegreeUrl}?page=${page}`;
+    const url = `${this.academicDegreeUrl}?page=0`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)

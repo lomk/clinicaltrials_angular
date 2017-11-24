@@ -1,4 +1,4 @@
-import { AcceptHealthyVolunteers }         from '../domain/accept-healthy-volunteers';
+import { Menu }         from '../domain/menu';
 import {Http, RequestOptions} from '@angular/http';
 import { Injectable }   from '@angular/core';
 import {Headers}        from '@angular/http';
@@ -6,55 +6,55 @@ import {Observable}     from 'rxjs/Observable';
 import {Globals} from '../globals';
 
 @Injectable()
-export class AcceptHealthyVolunteersService {
-  private acceptHealthyVolunteersAdminUrl = this.globals.API_URL + '/admin/acceptHealthyVolunteers';
-  private acceptHealthyVolunteersUrl = this.globals.API_URL + '/acceptHealthyVolunteers';
+export class MenuService {
+  private menuAdminUrl = this.globals.API_URL + '/admin/menu';
+  private menuUrl = this.globals.API_URL + '/menu';
   private headers = new Headers({'Content-Type': 'application/json'});
 
 
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getAll(): Observable<AcceptHealthyVolunteers[]> {
+  getAll(): Observable<Menu[]> {
     const options = new RequestOptions();
-    const url = `${this.acceptHealthyVolunteersUrl}?page=0`;
+    const url = `${this.menuUrl}?page=0`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)
-      .map(response => response.json() as AcceptHealthyVolunteers[])
+      .map(response => response.json() as Menu[])
       .catch(this.handleError);
   }
 
-  getOne(id: number): Observable<AcceptHealthyVolunteers> {
+  getOne(id: number): Observable<Menu> {
     const options = new RequestOptions();
-    const url = `${this.acceptHealthyVolunteersUrl}?id=${id}`;
+    const url = `${this.menuUrl}?id=${id}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)
-      .map(response => response.json() as AcceptHealthyVolunteers)
+      .map(response => response.json() as Menu)
       .catch(this.handleError);
   }
 
-  create(acceptHealthyVolunteers: AcceptHealthyVolunteers): Observable<AcceptHealthyVolunteers> {
+  create(menu: Menu): Observable<Menu> {
     const options = new RequestOptions();
-    const url = `${this.acceptHealthyVolunteersAdminUrl}/add`;
+    const url = `${this.menuAdminUrl}/add`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http
-      .post(url, JSON.stringify(acceptHealthyVolunteers), options)
-      .map(response => response.json() as AcceptHealthyVolunteers)
+      .post(url, JSON.stringify(menu), options)
+      .map(response => response.json() as Menu)
       .catch(this.handleError);
     // .catch(response => Observable.throw(response.json()));
   }
 
-  update(acceptHealthyVolunteers: AcceptHealthyVolunteers): Observable<AcceptHealthyVolunteers> {
+  update(menu: Menu): Observable<Menu> {
     const options = new RequestOptions();
-    const url = `${this.acceptHealthyVolunteersAdminUrl}/${acceptHealthyVolunteers.id}`;
+    const url = `${this.menuAdminUrl}/${menu.id}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http
-      .put(url, JSON.stringify(acceptHealthyVolunteers), options)
-      .map(response => response.json() as AcceptHealthyVolunteers)
+      .put(url, JSON.stringify(menu), options)
+      .map(response => response.json() as Menu)
       .catch(this.handleError);
     // .catch(response => Observable.throw(response.json()));
   }
@@ -63,7 +63,7 @@ export class AcceptHealthyVolunteersService {
     const options = new RequestOptions();
     options.withCredentials = true;
     options.headers = this.headers;
-    const url = `${this.acceptHealthyVolunteersUrl}/${id}`;
+    const url = `${this.menuUrl}/${id}`;
     return this.http.delete(url, options)
       .map(() => null)
       .catch(this.handleError);

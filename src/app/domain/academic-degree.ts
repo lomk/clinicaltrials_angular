@@ -1,6 +1,5 @@
 
 
-
 export class AcademicDegree {
   id: number;
   nameUa: String;

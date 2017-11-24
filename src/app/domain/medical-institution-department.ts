@@ -1,7 +1,7 @@
 
 
 
-import {MedicalInctitution} from "./medical-inctitution";
+import {MedicalInctitution} from './medical-inctitution';
 
 export class MedicalInstitutionDepartment {
   id: number;

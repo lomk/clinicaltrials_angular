@@ -1,10 +1,10 @@
 
 
 
-import {City} from "./city";
-import {PhoneMobileCode} from "./phone-mobile-code";
+import {City} from './city';
+import {PhoneMobileCode} from './phone-mobile-code';
 
-export class InvestigatorFax {
+export class InvestigatorPhoneMobile {
   id: number;
   phone: String;
   city: City;

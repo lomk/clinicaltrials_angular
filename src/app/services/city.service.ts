@@ -15,9 +15,9 @@ export class CityService {
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getAll(page: number): Observable<City[]> {
+  getAll(): Observable<City[]> {
     const options = new RequestOptions();
-    const url = `${this.cityUrl}?page=${page}`;
+    const url = `${this.cityUrl}?page=0`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)

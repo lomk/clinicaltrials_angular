@@ -2,10 +2,10 @@
 
 
 
-import {MohOfUkraineOrder} from "./moh-of-ukraine-order";
-import {Country} from "./country";
-import {Sponsor} from "./sponsor";
-import {StudyStatus} from "./study-status";
+import {MohOfUkraineOrder} from './moh-of-ukraine-order';
+import {Country} from './country';
+import {Sponsor} from './sponsor';
+import {StudyStatus} from './study-status';
 
 export class StudyIdentifier {
   id: number;

@@ -15,9 +15,9 @@ export class ClinicalStudyService {
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getAll(page: number): Observable<ClinicalStudy[]> {
+  getAll(): Observable<ClinicalStudy[]> {
     const options = new RequestOptions();
-    const url = `${this.clinicalStudyUrl}?page=${page}`;
+    const url = `${this.clinicalStudyUrl}?page=0`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)

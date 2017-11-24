@@ -1,9 +1,9 @@
-import { Role }         from '../domain/role';
-import {Http, RequestOptions} from '@angular/http';
-import { Injectable }   from '@angular/core';
-import {Headers}        from '@angular/http';
-import {Observable}     from 'rxjs/Observable';
-import {Globals} from '../globals';
+import { Role }                 from '../domain/role';
+import {Http, RequestOptions}   from '@angular/http';
+import { Injectable }           from '@angular/core';
+import {Headers}                from '@angular/http';
+import {Observable}             from 'rxjs/Observable';
+import {Globals}                from '../globals';
 
 @Injectable()
 export class RoleService {

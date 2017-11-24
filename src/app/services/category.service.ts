@@ -15,9 +15,9 @@ export class CategoryService {
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getAll(page: number): Observable<Category[]> {
+  getAll(): Observable<Category[]> {
     const options = new RequestOptions();
-    const url = `${this.categoryUrl}?page=${page}`;
+    const url = `${this.categoryUrl}?page=0`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)

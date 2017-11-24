@@ -1,11 +1,11 @@
 
 
 
-import {City} from "./city";
-import {Investigator} from "./investigator";
-import {MedicalInstitutionDepartment} from "./medical-institution-department";
-import {MedicalInstitutionOfHigherEducationDepartment} from "./medical-institution-of-higher-education-department";
-import {RecruitmentStatus} from "./recruitment-status";
+import {City} from './city';
+import {Investigator} from './investigator';
+import {MedicalInstitutionDepartment} from './medical-institution-department';
+import {MedicalInstitutionOfHigherEducationDepartment} from './medical-institution-of-higher-education-department';
+import {RecruitmentStatus} from './recruitment-status';
 
 export class TrialSite {
   id: number;

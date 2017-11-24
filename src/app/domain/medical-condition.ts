@@ -1,7 +1,7 @@
 
 
 
-import {TerapeuticArea} from "./terapeutic-area";
+import {TerapeuticArea} from './terapeutic-area';
 
 export class MedicalCondition {
   id: number;
