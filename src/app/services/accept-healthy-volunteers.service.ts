@@ -1,4 +1,4 @@
-import { Eligibility }         from '../domain/eligibility';
+import { AcceptHealthyVolunteers }         from '../domain/accept-healthy-volunteers';
 import {Http, RequestOptions} from '@angular/http';
 import { Injectable }   from '@angular/core';
 import {Headers}        from '@angular/http';
@@ -6,55 +6,55 @@ import {Observable}     from 'rxjs/Observable';
 import {Globals} from '../globals';
 
 @Injectable()
-export class EligibilityService {
-  private eligibilityAdminUrl = this.globals.API_URL + '/admin/eligibility';
-  private eligibilityUrl = this.globals.API_URL + '/eligibility';
+export class AcceptHealthyVolunteersService {
+  private acceptHealthyVolunteersAdminUrl = this.globals.API_URL + '/admin/acceptHealthyVolunteers';
+  private acceptHealthyVolunteersUrl = this.globals.API_URL + '/acceptHealthyVolunteers';
   private headers = new Headers({'Content-Type': 'application/json'});
 
 
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getAll(page: number): Observable<Eligibility[]> {
+  getAll(page: number): Observable<AcceptHealthyVolunteers[]> {
     const options = new RequestOptions();
-    const url = `${this.eligibilityUrl}?page=${page}`;
+    const url = `${this.acceptHealthyVolunteersUrl}?page=${page}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)
-      .map(response => response.json() as Eligibility[])
+      .map(response => response.json() as AcceptHealthyVolunteers[])
       .catch(this.handleError);
   }
 
-  getOne(id: number): Observable<Eligibility> {
+  getOne(id: number): Observable<AcceptHealthyVolunteers> {
     const options = new RequestOptions();
-    const url = `${this.eligibilityUrl}?id=${id}`;
+    const url = `${this.acceptHealthyVolunteersUrl}?id=${id}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)
-      .map(response => response.json() as Eligibility)
+      .map(response => response.json() as AcceptHealthyVolunteers)
       .catch(this.handleError);
   }
 
-  create(eligibility: Eligibility): Observable<Eligibility> {
+  create(acceptHealthyVolunteers: AcceptHealthyVolunteers): Observable<AcceptHealthyVolunteers> {
     const options = new RequestOptions();
-    const url = `${this.eligibilityAdminUrl}/add`;
+    const url = `${this.acceptHealthyVolunteersAdminUrl}/add`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http
-      .post(url, JSON.stringify(eligibility), options)
-      .map(response => response.json() as Eligibility)
+      .post(url, JSON.stringify(acceptHealthyVolunteers), options)
+      .map(response => response.json() as AcceptHealthyVolunteers)
       .catch(this.handleError);
     // .catch(response => Observable.throw(response.json()));
   }
 
-  update(eligibility: Eligibility): Observable<Eligibility> {
+  update(acceptHealthyVolunteers: AcceptHealthyVolunteers): Observable<AcceptHealthyVolunteers> {
     const options = new RequestOptions();
-    const url = `${this.eligibilityAdminUrl}/${eligibility.id}`;
+    const url = `${this.acceptHealthyVolunteersAdminUrl}/${acceptHealthyVolunteers.id}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http
-      .put(url, JSON.stringify(eligibility), options)
-      .map(response => response.json() as Eligibility)
+      .put(url, JSON.stringify(acceptHealthyVolunteers), options)
+      .map(response => response.json() as AcceptHealthyVolunteers)
       .catch(this.handleError);
     // .catch(response => Observable.throw(response.json()));
   }
@@ -63,7 +63,7 @@ export class EligibilityService {
     const options = new RequestOptions();
     options.withCredentials = true;
     options.headers = this.headers;
-    const url = `${this.eligibilityUrl}/${id}`;
+    const url = `${this.acceptHealthyVolunteersUrl}/${id}`;
     return this.http.delete(url, options)
       .map(() => null)
       .catch(this.handleError);

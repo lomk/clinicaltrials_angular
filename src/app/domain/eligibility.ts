@@ -4,7 +4,7 @@
 
 
 import {Gender} from "./gender";
-import {AcceptHealthyVolunteers} from "./accept-Healthy-volunteers";
+import {AcceptHealthyVolunteers} from "./accept-healthy-volunteers";
 
 export class Eligibility {
   id: number;

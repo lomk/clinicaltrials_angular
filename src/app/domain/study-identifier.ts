@@ -7,7 +7,7 @@ import {Country} from "./country";
 import {Sponsor} from "./sponsor";
 import {StudyStatus} from "./study-status";
 
-export class StudyIdentifiers {
+export class StudyIdentifier {
   id: number;
   sponsorsProtocolNumber: number;
   clinicalTrialsComUaIdentifier: number;

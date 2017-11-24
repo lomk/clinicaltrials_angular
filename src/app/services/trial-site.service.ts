@@ -15,7 +15,7 @@ export class TrialSiteService {
   constructor(private http: Http, private globals: Globals) {
   }
 
-  getTrialSites(page: number): Observable<TrialSite[]> {
+  getAll(page: number): Observable<TrialSite[]> {
     const options = new RequestOptions();
     const url = `${this.trialSiteUrl}?page=${page}`;
     options.withCredentials = true;
@@ -25,7 +25,7 @@ export class TrialSiteService {
       .catch(this.handleError);
   }
 
-  getTrialSite(id: number): Observable<TrialSite> {
+  getOne(id: number): Observable<TrialSite> {
     const options = new RequestOptions();
     const url = `${this.trialSiteUrl}?id=${id}`;
     options.withCredentials = true;
