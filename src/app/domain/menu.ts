@@ -14,7 +14,7 @@ export class Menu {
   seoDescUa: String;
   seoDescRu: String;
   seoDescEn: String;
-  sections: Array<Section>;
+  sections: Section[];
 
 
 

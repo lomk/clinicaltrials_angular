@@ -4,6 +4,7 @@ import { Injectable }   from '@angular/core';
 import {Headers}        from '@angular/http';
 import {Observable}     from 'rxjs/Observable';
 import {Globals} from '../globals';
+import {Section} from '../domain/section';
 
 @Injectable()
 export class MenuService {
@@ -67,6 +68,50 @@ export class MenuService {
     return this.http.delete(url, options)
       .map(() => null)
       .catch(this.handleError);
+  }
+
+  getMockMenus(): Menu[] {
+    const menus: Menu[] = [];
+    const menu: Menu = new Menu;
+    const menu2: Menu = new Menu;
+    const menu3: Menu = new Menu;
+    const section: Section = new Section;
+    const section2: Section = new Section;
+    const section3: Section = new Section;
+    section.nameEn = 'NAME EN';
+    section.nameEn = 'NAME RU';
+    section.nameEn = 'NAME UA';
+    section2.nameEn = 'NAME EN 2';
+    section2.nameEn = 'NAME RU 2';
+    section2.nameEn = 'NAME UA 2';
+    section3.nameEn = 'NAME EN 3';
+    section3.nameEn = 'NAME RU 3';
+    section3.nameEn = 'NAME UA 3';
+    menu.nameEn = 'NAME EN';
+    menu.nameEn = 'NAME RU';
+    menu.nameEn = 'NAME UA';
+    menu2.nameEn = 'NAME EN 2';
+    menu2.nameEn = 'NAME RU 2';
+    menu2.nameEn = 'NAME UA 2';
+    menu3.nameEn = 'NAME EN 3';
+    menu3.nameEn = 'NAME RU 3';
+    menu3.nameEn = 'NAME UA 3';
+    menu.sections = [];
+    menu2.sections = [];
+    menu3.sections = [];
+    menu.sections.push(section);
+    menu.sections.push(section2);
+    menu.sections.push(section3);
+    menu2.sections.push(section);
+    menu2.sections.push(section2);
+    menu2.sections.push(section3);
+    menu3.sections.push(section);
+    menu3.sections.push(section2);
+    menu3.sections.push(section3);
+    menus.push(menu);
+    menus.push(menu2);
+    menus.push(menu3);
+    return menus;
   }
 
   public handleError = (error: Response) => {
