@@ -16,6 +16,7 @@ import {ArticleService} from '../services/article.service';
 import {MenuService} from '../services/menu.service';
 import {SectionService} from '../services/section.service';
 import {AboutTrialsComponent} from '../components/about-trials.component';
+import {SectionMenuComponent} from '../components/section-menu.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {AboutTrialsComponent} from '../components/about-trials.component';
   ],
   declarations: [
     MainComponent,
+    SectionMenuComponent,
     AboutUsComponent,
     AboutTrialsComponent,
     NewsComponent,

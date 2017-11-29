@@ -15,13 +15,13 @@ import {Router} from '@angular/router';
 export class MainComponent {
   title = 'Main';
   content = 'Main page';
-  menu: Menu;
+  selectedMenu: Menu;
   menus: Array<Menu>;
-  sections: Array<Section>;
-  section: Section;
+  sections: Section[];
+
 
   constructor(
-    private router: Router,
+    // private router: Router,
     private menuService: MenuService ) {}
 
   getMenus(): void {
@@ -31,10 +31,17 @@ export class MainComponent {
 
   ngOnInit() {
     this.getMenus();
+    this.selectedMenu = this.menus[0];
   }
 
   openMenu(menu: Menu) {
-    console.log('HELLO');
+    if (menu.sections) {
+      this.selectedMenu = menu;
+      this.sections = menu.sections;
+      console.log(menu.sections[0].nameEn);
+    } else {this.selectedMenu = null; }
+
+    return false;
   }
 
 }

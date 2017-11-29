@@ -20,17 +20,16 @@
 </div>
 <div class="navbar navbar-default">
   <div class="container">
-    <div class="navbar-header">
-      <strong class="navbar-brand"><a routerLink="/admin" routerLinkActive="active">{{title}}</a></strong>
+    <div class="col-sm-3 col-sm-1">
     </div>
-    <ul class="nav navbar-nav">
-      <li *ngFor="let menu of menus">
-        <button class="btn btn-md col-xs-12" (click)="openMenu(menu)">{{menu.nameEn}}</button>
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav" *ngFor="let menu of menus">
+      <li class="{{selectedMenu == menu ? 'active' : ''}}">
+        <a href="#" (click)="openMenu(menu)">{{menu.nameEn}}</a>
       </li>
     </ul>
   </div>
 </div>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+  <app-section-menu [menu]="selectedMenu"></app-section-menu>
 </div>
