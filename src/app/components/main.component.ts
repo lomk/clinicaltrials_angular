@@ -1,6 +1,4 @@
 
-
-
 import {Component} from '@angular/core';
 import {MenuService} from '../services/menu.service';
 import {Menu} from '../domain/menu';
