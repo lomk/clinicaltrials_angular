@@ -20,7 +20,6 @@ export class SectionMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // console.log(this.sections[0].nameEn);
     this.selectedSection = this.menu.sections[0];
   }
   onSelect(section: Section) {

@@ -1,11 +1,4 @@
-
-
-
-import {User} from "./user";
-import {Tag} from './tag';
-
-
-export class Article {
+export class AboutUsArticle {
   id: number;
   titleUa: String;
   titleRu: String;
@@ -20,10 +13,5 @@ export class Article {
   bodyRu: String;
   bodyEn: String;
   dateField: Date;
-  rating: number;
   imgUrl: String;
-  comments: Array<Comment>;
-  user: User;
-  tags: Array<Tag>;
-
 }
