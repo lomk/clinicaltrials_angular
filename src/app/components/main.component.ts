@@ -37,7 +37,7 @@ export class MainComponent {
       this.selectedMenu = menu;
       this.sections = menu.sections;
       console.log(menu.sections[0].nameEn);
-    } else {this.selectedMenu = null; }
+    } else { this.selectedMenu = null; }
 
     return false;
   }
