@@ -1,13 +1,13 @@
 
 import {Component, OnInit} from '@angular/core';
-import {MenuService} from '../services/menu.service';
-import {Menu} from '../domain/menu';
-import {Section} from '../domain/section';
+import {MenuService} from './menu.service';
+import {Menu} from './menu';
+import {Section} from '../section/section';
 import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-main-home',
-  templateUrl: '../html/main.component.html',
+  templateUrl: './main.component.html',
   providers: [MenuService]
 })
 export class MainComponent implements OnInit{

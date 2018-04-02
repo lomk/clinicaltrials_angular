@@ -1,7 +1,7 @@
 
 
 
-import {Section} from './section';
+import {Section} from '../section/section';
 
 export class Menu {
   id: number;

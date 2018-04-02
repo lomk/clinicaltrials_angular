@@ -1,4 +1,4 @@
-import { Section }              from '../domain/section';
+import { Section }              from './section';
 import {Http, RequestOptions}   from '@angular/http';
 import { Injectable }           from '@angular/core';
 import {Headers}                from '@angular/http';

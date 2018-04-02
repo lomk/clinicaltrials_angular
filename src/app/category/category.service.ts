@@ -1,4 +1,4 @@
-import { Category }         from '../category/category';
+import { Category }         from './category';
 import {Http, RequestOptions} from '@angular/http';
 import { Injectable }   from '@angular/core';
 import {Headers}        from '@angular/http';

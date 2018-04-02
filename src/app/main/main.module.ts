@@ -7,16 +7,16 @@ import {AppRoutingModule}           from '../app-routing.module';
 
 import {MainComponent} from "./main.component";
 import {AboutUsComponent} from '../about-us/about-us.component';
-import {NewsComponent} from '../components/news.component';
+import {NewsComponent} from '../news/news.component';
 import {CompaniesComponent} from '../company/companies.component';
-import {TrialBaseComponent} from '../components/trial-base.component';
+import {TrialBaseComponent} from '../trial-base/trial-base.component';
 import {ContactsComponent} from '../contact/contacts.component';
 import {Globals} from '../globals';
-import {ArticleService} from '../services/article.service';
-import {MenuService} from '../services/menu.service';
-import {SectionService} from '../services/section.service';
+import {ArticleService} from '../article/article.service';
+import {MenuService} from './menu.service';
+import {SectionService} from '../section/section.service';
 import {AboutTrialsComponent} from '../about-trials/about-trials.component';
-import {SectionMenuComponent} from '../components/section-menu.component';
+import {SectionMenuComponent} from '../section/section-menu.component';
 
 
 @NgModule({

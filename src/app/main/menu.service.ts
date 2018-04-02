@@ -1,10 +1,10 @@
-import { Menu }         from '../domain/menu';
+import { Menu }         from './menu';
 import {Http, RequestOptions} from '@angular/http';
 import { Injectable }   from '@angular/core';
 import {Headers}        from '@angular/http';
 import {Observable}     from 'rxjs/Observable';
 import {Globals} from '../globals';
-import {Section} from '../domain/section';
+import {Section} from '../section/section';
 
 @Injectable()
 export class MenuService {

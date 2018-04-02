@@ -7,7 +7,7 @@ import                  'rxjs/add/observable/throw';
 
 @Component({
   selector: 'app-news',
-  templateUrl: '../html/news.component.html'
+  templateUrl: '../news/news.component.html'
 })
 export class SectionComponent {
   title = 'Section';

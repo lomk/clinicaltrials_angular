@@ -7,7 +7,7 @@ import                  'rxjs/add/observable/throw';
 
 @Component({
   selector: 'app-about-us',
-  templateUrl: '../html/about-us.component.html'
+  templateUrl: './about-us.component.html'
 })
 export class AboutUsComponent {
   title = 'About us';

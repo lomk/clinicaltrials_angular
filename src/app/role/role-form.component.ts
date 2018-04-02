@@ -7,7 +7,7 @@ import {User}                   from '../user/user';
 
 @Component({
     selector: 'role-form',
-    templateUrl: '../html/role-form.component.html',
+    templateUrl: './role-form.component.html',
     providers: [ RoleService]
 })
 export class RoleFormComponent implements OnInit {
