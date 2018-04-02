@@ -1,4 +1,4 @@
-import { User }         from '../domain/user';
+import { User }         from './user';
 
 import {Http, RequestOptions} from '@angular/http';
 import { Injectable }   from '@angular/core';

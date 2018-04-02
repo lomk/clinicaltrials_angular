@@ -1,5 +1,5 @@
 
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MenuService} from '../services/menu.service';
 import {Menu} from '../domain/menu';
 import {Section} from '../domain/section';
@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
   templateUrl: '../html/main.component.html',
   providers: [MenuService]
 })
-export class MainComponent {
+export class MainComponent implements OnInit{
   title = 'Main';
   content = 'Main page';
   selectedMenu: Menu;

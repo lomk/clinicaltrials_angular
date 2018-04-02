@@ -1,4 +1,4 @@
-import { Role }                 from '../domain/role';
+import { Role }                 from './role';
 import {Http, RequestOptions}   from '@angular/http';
 import { Injectable }           from '@angular/core';
 import {Headers}                from '@angular/http';

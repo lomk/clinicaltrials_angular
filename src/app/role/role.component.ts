@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Role } from '../domain/role';
-import { RoleService } from '../services/role.service';
+import { Role } from './role';
+import { RoleService } from './role.service';
 import {Router} from '@angular/router';
-import {User} from "../domain/user";
+import {User} from "../user/user";
 
 @Component({
     selector: 'app-roles',

@@ -1,7 +1,7 @@
-import {RoleService}        from '../services/role.service';
-import {Role}               from '../domain/role';
-import {UserService}        from '../services/user.service';
-import {User}               from '../domain/user';
+import {RoleService}        from '../role/role.service';
+import {Role}               from '../role/role';
+import {UserService}        from './user.service';
+import {User}               from './user';
 import {Component, OnInit}  from '@angular/core';
 import {Router}             from '@angular/router';
 import {NgForm}             from '@angular/forms';
@@ -9,7 +9,7 @@ import {NgForm}             from '@angular/forms';
 
 @Component({
     selector: 'app-user-form',
-    templateUrl: '../html/user-form.component.html',
+    templateUrl: './user-form.component.html',
     providers: [
         UserService,
         RoleService]

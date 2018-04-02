@@ -1,12 +1,12 @@
 import {RouterModule, Routes}         from '@angular/router';
 import {NgModule}                     from '@angular/core';
 
-import {AdminComponent}               from '../components/admin.component';
-import {RoleFormComponent}            from '../components/role-form.component';
-import {RoleComponent}                from '../components/role.component';
-import {UserComponent}                from '../components/user.component';
-import {UserFormComponent}            from '../components/user-form.component';
-import {AdminGuard}                   from '../services/admin-guard.service';
+import {AdminComponent}               from './admin.component';
+import {RoleFormComponent}            from '../role/role-form.component';
+import {RoleComponent}                from '../role/role.component';
+import {UserComponent}                from '../user/user.component';
+import {UserFormComponent}            from '../user/user-form.component';
+import {AdminGuard}                   from './admin-guard.service';
 
 
 

@@ -1,12 +1,12 @@
 import { NgModule }                 from '@angular/core';
 import { RouterModule, Routes }     from '@angular/router';
 
-import {LoginComponent}             from './components/login.component';
-import {LogoutComponent}            from './components/logout.component';
-import {AdminComponent}             from './components/admin.component';
-import {AdminRoutingModule}         from './modules/admin-routing.module';
-import {AuthService}                from './services/auth.service';
-import {MainRoutingModule} from './modules/main-routing.module';
+import {LoginComponent}             from './auth/login.component';
+import {LogoutComponent}            from './auth/logout.component';
+import {AdminComponent}             from './admin/admin.component';
+import {AdminRoutingModule}         from './admin/admin-routing.module';
+import {AuthService}                from './auth/auth.service';
+import {MainRoutingModule} from './main/main-routing.module';
 
 const routes: Routes = [
     { path: '',                         redirectTo: '/login', pathMatch: 'full' },

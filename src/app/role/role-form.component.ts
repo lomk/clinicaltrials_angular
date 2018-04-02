@@ -1,9 +1,9 @@
 import {Component, OnInit}      from '@angular/core';
-import {RoleService}            from '../services/role.service';
-import {Role}                   from '../domain/role';
+import {RoleService}            from './role.service';
+import {Role}                   from './role';
 import {Router}                 from '@angular/router';
 import {NgForm}                 from '@angular/forms';
-import {User}                   from '../domain/user';
+import {User}                   from '../user/user';
 
 @Component({
     selector: 'role-form',

@@ -1,8 +1,8 @@
 
 
 
-import {User} from "./user";
-import {Tag} from './tag';
+import {User} from "../user/user";
+import {Tag} from '../domain/tag';
 
 
 export class Article {

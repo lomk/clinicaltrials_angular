@@ -7,7 +7,7 @@ import                  'rxjs/add/observable/throw';
 
 @Component({
   selector: 'app-admin-home',
-  templateUrl: '../html/admin.component.html'
+  templateUrl: './admin.component.html'
 })
 export class AdminComponent {
   title = 'Admin';

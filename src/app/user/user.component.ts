@@ -1,12 +1,12 @@
 import { Component, OnInit }    from '@angular/core';
 
-import { User }              from '../domain/user';
-import { UserService }       from '../services/user.service';
+import { User }              from './user';
+import { UserService }       from './user.service';
 import {Router}                 from '@angular/router';
 
 @Component({
     selector: 'app-users',
-    templateUrl: '../html/user.component.html' ,
+    templateUrl: './user.component.html' ,
     // styleUrls: [`./local-ip.component.css`],
     providers: [UserService]
 })

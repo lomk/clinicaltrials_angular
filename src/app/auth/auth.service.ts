@@ -3,7 +3,7 @@ import { Injectable }   from '@angular/core';
 import {Headers}        from '@angular/http';
 import {Observable}     from 'rxjs/Observable';
 import {Globals} from '../globals';
-import {User} from '../domain/user';
+import {User} from '../user/user';
 
 
 @Injectable()
