@@ -10,7 +10,8 @@ import {LoginComponent}             from './auth/login.component';
 import {LogoutComponent}            from './auth/logout.component';
 import {AdminModule}                from './admin/admin.module';
 import {AuthService}                from './auth/auth.service';
-import {MainModule} from './main/main.module';
+import {MainModule}                 from './main/main.module';
+import {MainComponent}              from './main/main.component';
 
 @NgModule({
     imports: [
@@ -23,7 +24,7 @@ import {MainModule} from './main/main.module';
   ],
     declarations: [
         AppComponent,
-        // RemoteIpDetailComponent,
+        MainComponent,
         LoginComponent,
         LogoutComponent
   ],

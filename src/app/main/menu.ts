@@ -16,6 +16,4 @@ export class Menu {
   seoDescEn: String;
   sections: Section[];
 
-
-
 }

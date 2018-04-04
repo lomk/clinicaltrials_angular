@@ -1,45 +1,31 @@
 
 import {Component, OnInit} from '@angular/core';
-import {MenuService} from './menu.service';
-import {Menu} from './menu';
+import {CategoryService} from './category.service';
+import {Category} from './category';
 import {Section} from '../section/section';
 import {Router} from '@angular/router';
+import {ArticleService} from '../article/article.service';
+import {Article} from '../article/article';
+import {User} from '../user/user';
+import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-main-home',
   templateUrl: './main.component.html',
-  providers: [MenuService]
+  providers: [ArticleService, Router]
 })
 export class MainComponent implements OnInit{
   title = 'Main';
   content = 'Main page';
-  selectedMenu: Menu;
-  menus: Array<Menu>;
-  sections: Section[];
+  currentUser: User;
+  articles: Article[];
+  private subscription: Subscription;
 
-
-  constructor(
-    // private router: Router,
-    private menuService: MenuService ) {}
-
-  getMenus(): void {
-    // this.menuService.getAll().subscribe(menus => this.menus = menus);
-    this.menus = this.menuService.getMockMenus();
+  constructor( private articleService: ArticleService, private router: Router){
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
 
   ngOnInit() {
-    this.getMenus();
-    this.selectedMenu = this.menus[0];
+  this.router.navigate("news")
   }
-
-  openMenu(menu: Menu) {
-    if (menu.sections) {
-      this.selectedMenu = menu;
-      this.sections = menu.sections;
-      console.log(menu.sections[0].nameEn);
-    } else { this.selectedMenu = null; }
-
-    return false;
-  }
-
 }

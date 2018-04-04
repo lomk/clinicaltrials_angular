@@ -4,6 +4,7 @@ import { Injectable }   from '@angular/core';
 import {Headers}        from '@angular/http';
 import {Observable}     from 'rxjs/Observable';
 import {Globals} from '../globals';
+import {Category} from '../category/category';
 
 @Injectable()
 export class ArticleService {
@@ -25,9 +26,39 @@ export class ArticleService {
       .catch(this.handleError);
   }
 
-  getOne(id: number): Observable<Article> {
+  getByCategoryAndPage(page: number, category: Category): Observable<Article[]> {
+    const options = new RequestOptions();
+    const url = `${this.articleUrl}?page=${page}&category=${category}`;
+    options.withCredentials = true;
+    options.headers = this.headers;
+    return this.http.get(url, options)
+      .map(response => response.json() as Article[])
+      .catch(this.handleError);
+  }
+
+  getByCategory(category: Category): Observable<Article[]> {
+    const options = new RequestOptions();
+    const url = `${this.articleUrl}?category=${category}`;
+    options.withCredentials = true;
+    options.headers = this.headers;
+    return this.http.get(url, options)
+      .map(response => response.json() as Article[])
+      .catch(this.handleError);
+  }
+
+  getById(id: number): Observable<Article> {
     const options = new RequestOptions();
     const url = `${this.articleUrl}?id=${id}`;
+    options.withCredentials = true;
+    options.headers = this.headers;
+    return this.http.get(url, options)
+      .map(response => response.json() as Article)
+      .catch(this.handleError);
+  }
+
+  getByUrl(name: string): Observable<Article> {
+    const options = new RequestOptions();
+    const url = `${this.articleUrl}?url=${name}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)

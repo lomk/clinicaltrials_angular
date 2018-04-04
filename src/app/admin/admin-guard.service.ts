@@ -25,7 +25,7 @@ export class AdminGuard implements CanActivate {
       if (user.username != null && user.role.name === 'ADMIN') { this.res = true;
       return true;
     } else {
-        // this.router.navigate(['/' + user.role.name.toLowerCase()]);
+        this.router.navigate(['/' + user.role.name.toLowerCase()]);
         return false;
       }
     });

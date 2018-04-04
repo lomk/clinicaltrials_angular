@@ -7,9 +7,11 @@ import {AdminComponent}             from './admin/admin.component';
 import {AdminRoutingModule}         from './admin/admin-routing.module';
 import {AuthService}                from './auth/auth.service';
 import {MainRoutingModule} from './main/main-routing.module';
+import {MainComponent} from './main/main.component';
 
 const routes: Routes = [
-    { path: '',                         redirectTo: '/login', pathMatch: 'full' },
+    { path: '',                         redirectTo: '/main', pathMatch: 'full' },
+    { path: 'main',                     component: MainComponent},
     { path: 'login',                    component: LoginComponent},
     { path: 'logout',                   component: LogoutComponent},
     { path: 'admin',                    component: AdminComponent}

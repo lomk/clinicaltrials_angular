@@ -12,7 +12,7 @@
     <div class="navbar-collapse collapse navbar-right">
     <ul class="nav navbar-nav">
       <li>
-        <a routerLink="login" routerLinkActive="active">Login</a>
+        <a routerLink="/login" routerLinkActive="active">Login</a>
       </li>
     </ul>
     </div>
@@ -24,11 +24,6 @@
     </div>
     <div class="navbar-header">
     </div>
-    <!--<ul class="nav navbar-nav" *ngFor="let menu of menus">-->
-      <!--<li class="{{selectedMenu == menu ? 'active' : ''}}">-->
-        <!--<a href="#" (click)="openMenu(menu)">{{menu.nameEn}}</a>-->
-      <!--</li>-->
-    <!--</ul>-->
     <ul class="nav navbar-nav">
     <li>
       <a routerLink="news" routerLinkActive="active">News</a>
@@ -48,4 +43,7 @@
     </ul>
   </div>
 </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>

@@ -37,9 +37,7 @@ import {SectionMenuComponent} from '../section/section-menu.component';
     ContactsComponent
   ],
   providers: [
-    ArticleService,
-    MenuService,
-    SectionService
+    ArticleService
   ],
   exports: [
     MainComponent

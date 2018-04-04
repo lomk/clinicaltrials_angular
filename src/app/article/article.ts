@@ -2,7 +2,9 @@
 
 
 import {User} from "../user/user";
-import {Tag} from '../domain/tag';
+import {Tag} from '../tag/tag';
+import {Section} from '../section/section';
+import {Category} from '../category/category';
 
 
 export class Article {
@@ -22,8 +24,7 @@ export class Article {
   dateField: Date;
   rating: number;
   imgUrl: String;
-  comments: Array<Comment>;
+  category: Category;
   user: User;
-  tags: Array<Tag>;
 
 }

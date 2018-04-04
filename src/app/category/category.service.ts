@@ -25,6 +25,16 @@ export class CategoryService {
       .catch(this.handleError);
   }
 
+  getByUrl(name: String){
+    const options = new RequestOptions();
+    const url = `${this.categoryUrl}?=${name}`;
+    options.withCredentials = true;
+    options.headers = this.headers;
+    return this.http.get(url, options)
+      .map(response => response.json() as Category)
+      .catch(this.handleError);
+  }
+
   getOne(id: number): Observable<Category> {
     const options = new RequestOptions();
     const url = `${this.categoryUrl}?id=${id}`;
