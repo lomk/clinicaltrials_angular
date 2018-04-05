@@ -1,9 +1,10 @@
-import { Category }         from './category';
-import {Http, RequestOptions} from '@angular/http';
-import { Injectable }   from '@angular/core';
-import {Headers}        from '@angular/http';
-import {Observable}     from 'rxjs/Observable';
-import {Globals} from '../globals';
+
+import {Http, RequestOptions}   from '@angular/http';
+import { Injectable }           from '@angular/core';
+import {Headers}                from '@angular/http';
+import {Observable}             from 'rxjs/Observable';
+import {Globals}                from '../globals';
+import {Category} from './category';
 
 @Injectable()
 export class CategoryService {
@@ -27,7 +28,7 @@ export class CategoryService {
 
   getByUrl(name: String){
     const options = new RequestOptions();
-    const url = `${this.categoryUrl}?=${name}`;
+    const url = `${this.categoryUrl}?url=${name}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)

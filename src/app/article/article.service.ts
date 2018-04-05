@@ -26,9 +26,9 @@ export class ArticleService {
       .catch(this.handleError);
   }
 
-  getByCategoryAndPage(page: number, category: Category): Observable<Article[]> {
+  getByCategoryAndPage(category: Category, page: number): Observable<Article[]> {
     const options = new RequestOptions();
-    const url = `${this.articleUrl}?page=${page}&category=${category}`;
+    const url = `${this.articleUrl}?page=${page}&category=${category.url}`;
     options.withCredentials = true;
     options.headers = this.headers;
     return this.http.get(url, options)

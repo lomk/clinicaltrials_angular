@@ -24,7 +24,6 @@ import {MainComponent}              from './main/main.component';
   ],
     declarations: [
         AppComponent,
-        MainComponent,
         LoginComponent,
         LogoutComponent
   ],

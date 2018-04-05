@@ -13,7 +13,6 @@ import {TrialBaseComponent} from '../trial-base/trial-base.component';
 import {ContactsComponent} from '../contact/contacts.component';
 import {Globals} from '../globals';
 import {ArticleService} from '../article/article.service';
-import {MenuService} from './menu.service';
 import {SectionService} from '../section/section.service';
 import {AboutTrialsComponent} from '../about-trials/about-trials.component';
 import {SectionMenuComponent} from '../section/section-menu.component';
