@@ -1,1 +1,7 @@
-<div>News</div>
+<div class="row">News</div>
+<div class="row" *ngFor="let article of articles">
+  <div class="col-sm-12" >
+    <h3 style="cursor: pointer;">{{article.titleEn}}</h3>
+    <p>{{article.descEn}}</p>
+  </div>
+</div>

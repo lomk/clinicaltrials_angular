@@ -1,7 +1,8 @@
-<div>about clinical trials</div>
+<div class="row">about clinical trials</div>
 <div class="row" *ngFor="let article of articles">
   <div class="col-sm-12">
-    <h2>{{article.titleEn}}</h2>
+    <h3>{{article.titleEn}}</h3>
+    <p>{{article.descEn}}</p>
     <p>{{article.bodyEn}}</p>
   </div>
 </div>
